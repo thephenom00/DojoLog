@@ -1,0 +1,17 @@
+version: "3.9"
+
+volumes:
+  attendance-postgres:
+
+services:
+  attendance-postgres:
+    image: postgres:latest
+    hostname: attendance-host
+    ports:
+      - "45000:5432"
+    volumes:
+      - ./attendance-postgres:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: admin
+      POSTGRES_DB: attendance-db

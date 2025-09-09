@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@theme {
+    --color-judo-blue: #318CE7;
+}
