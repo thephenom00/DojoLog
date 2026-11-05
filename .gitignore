@@ -1,0 +1,52 @@
+# Local secrets and configuration
+.env
+.env.*
+!.env.example
+
+# Frontend: installed dependencies, builds, caches, and test output
+frontend/node_modules/
+frontend/dist/
+frontend/build/
+frontend/.vite/
+frontend/.vercel/
+frontend/.eslintcache
+frontend/coverage/
+frontend/.nyc_output/
+frontend/test-results/
+frontend/playwright-report/
+frontend/cypress/videos/
+frontend/cypress/screenshots/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/pnpm-debug.log*
+
+# Backend: Maven build output, local database data, and runtime logs
+**/target/
+backend/attendance-postgres/
+backend/logs/
+*.log
+hs_err_pid*.log
+replay_pid*.log
+*.hprof
+
+# Coverage and generated reports
+coverage/
+.nyc_output/
+*.lcov
+
+# OS/editor temporary files
+.DS_Store
+Thumbs.db
+desktop.ini
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+*.swp
+*.swo
+*~
+*.bak
+*.orig
+*.rej

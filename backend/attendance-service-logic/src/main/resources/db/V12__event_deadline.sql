@@ -1,0 +1,1 @@
+alter table event add column deadline DATE;

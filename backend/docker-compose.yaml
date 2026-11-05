@@ -1,0 +1,14 @@
+volumes:
+  attendance-postgres-data:
+
+services:
+  attendance-postgres:
+    image: postgres:16-alpine
+    ports:
+      - "45000:5432"
+    volumes:
+      - attendance-postgres-data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: ${DB_USERNAME:?Set DB_USERNAME in backend/.env}
+      POSTGRES_PASSWORD: ${DB_PASSWORD:?Set DB_PASSWORD in backend/.env}
+      POSTGRES_DB: ${DB_NAME:?Set DB_NAME in backend/.env}
